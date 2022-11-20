@@ -1,0 +1,43 @@
+.navbar {
+  background: var(--element);
+  height: var(--header-height);
+  font-size: 0.75em;
+  display: flex;
+  padding: 0 1.5rem;
+  .wrapper {
+    @extend %fSpacerC;
+    flex: 1;
+    .search {
+      @extend %fCenter;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: 0.0625rem solid;
+      border-radius: 0.25rem;
+      input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: inherit;
+        &::placeholder {
+          font-family: inherit;
+          color: inherit;
+        }
+      }
+    }
+    .items {
+      display: flex;
+    }
+    .item {
+      cursor: pointer;
+      margin-left: 1.5rem;
+      @extend %fRowCY;
+      gap: 0.5rem;
+    }
+    .avatar {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      border: 1px solid;
+    }
+  }
+}

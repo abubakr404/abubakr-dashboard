@@ -1,0 +1,6 @@
+.widget {
+  flex: 1;
+  height: 8rem;
+  box-shadow: var(--main-shadow);
+  @extend %fSpacer;
+}
