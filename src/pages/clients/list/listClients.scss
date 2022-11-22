@@ -1,0 +1,56 @@
+.clients {
+  .top {
+    @extend %fSpacer;
+  }
+}
+.clients-container {
+  @include responGridCol(13rem);
+}
+.client-card {
+  @extend %fCol;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: var(--main-border-radius);
+  box-shadow: var(--main-shadow);
+  img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.0625rem solid;
+    object-fit: cover;
+  }
+  .info {
+    @extend %fColC;
+    .name {
+      margin: 0.625rem 0 0.125rem;
+      font-size: 1.125rem;
+    }
+  }
+  .contact {
+    @extend %fColC;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+  }
+  .actions {
+    @extend %fSpacer;
+    margin-top: 0.5rem;
+    padding: 0.25rem;
+    a {
+      display: flex;
+    }
+    span {
+      padding: 0.25rem 1rem;
+      border-radius: 0.3125rem;
+      width: 5rem;
+      cursor: pointer;
+      text-align: center;
+      color: var(--light-on-primary);
+      &.view {
+        background-color: var(--success);
+      }
+      &.delete {
+        background-color: var(--danger);
+      }
+    }
+  }
+}

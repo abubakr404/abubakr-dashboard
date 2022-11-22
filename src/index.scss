@@ -49,6 +49,13 @@ html {
   --text-dark: var(--dark-on-primary);
   --text-element-dark: var(--dark-on-primary-container);
 
+  /* --------------- geanral colors set ----------------- */
+
+  --success: #0f9263;
+  --danger: #c5182f;
+  --warning: #b89326;
+  --info: #009696;
+
   /* --------------- geanral var set ----------------- */
 
   --main-transition: #{$mainTransition};
@@ -56,10 +63,11 @@ html {
   --main-border-color: #{$borderGradient};
 
   --main-border-radius: 0.3125rem;
-  --dark-shadow: 0 0 0.25rem 0 #36497e;
-  --light-shadow: 0 0 0.25rem 0 #8790b187;
+  --dark-shadow: 0 0 0.3125rem 0 #272727;
+  --light-shadow: 0 0 0.3125rem 0 #bcbcbc;
 
   --header-height: 3.5rem;
+  --sidebar-width: 15rem;
   --main-padding-top: 2rem;
   --main-padding-bottom: 2rem;
 }
@@ -98,6 +106,7 @@ ul {
   .app {
     --surface: var(--surface-light);
     --background: var(--background-light);
+    --background-inverse: var(--background-dark);
     --element: var(--element-light);
     --text: var(--text-light);
     --text-element: var(--text-element-light);
@@ -106,6 +115,7 @@ ul {
     &.toggleMode {
       --surface: var(--surface-dark);
       --background: var(--background-dark);
+      --background-inverse: var(--background-light);
       --element: var(--element-dark);
       --text: var(--text-dark);
       --text-element: var(--text-element-dark);
@@ -119,6 +129,8 @@ ul {
   .app {
     --surface: var(--surface-dark);
     --background: var(--background-dark);
+    --background-inverse: var(--background-light);
+
     --element: var(--element-dark);
     --text: var(--text-dark);
     --text-element: var(--text-element-dark);
@@ -127,6 +139,8 @@ ul {
     &.toggleMode {
       --surface: var(--surface-light);
       --background: var(--background-light);
+      --background-inverse: var(--background-dark);
+
       --element: var(--element-light);
       --text: var(--text-light);
       --text-element: var(--text-element-light);
@@ -139,7 +153,7 @@ ul {
 .app {
   @extend %fCol;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   color-scheme: var(--scheme-color);
   background: var(--surface);
   color: var(--text-element);
@@ -148,8 +162,11 @@ ul {
 @import "./components/navbar/navbar";
 @import "./components/sidebar/sidebar";
 @import "./components/widget/widget";
-@import "./pages/home/home";
-@import "./pages/list/list";
+@import "./components/table/table";
+@import "./components/layouts/dashboardLayout";
 @import "./pages/login/login";
-@import "./pages/new/new";
-@import "./pages/single/single";
+@import "./pages/home/home";
+@import "./pages/clients/list/listClients";
+@import "./pages/clients/single/singleClient";
+@import "./pages/clients/new/newClient";
+@import "./pages/projects/list/listProjects";

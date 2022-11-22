@@ -1,7 +1,7 @@
-.home {
+.page {
   display: flex;
   flex: 1;
-  .home-container {
+  .page-container {
     @extend %fCol;
     flex: 6;
     .widgets {
@@ -16,14 +16,22 @@
     box-shadow: var(--main-shadow);
     max-width: 100%;
     margin: 1.5rem;
+    padding: 1.5rem;
     overflow: auto;
     flex: 1;
   }
   .list-title {
     @extend %fRowCY;
-    margin: 0;
-    padding: 0 1.5rem;
+    margin: 0 0 1rem;
     font-size: 1.5rem;
-    height: 5rem;
+  }
+  a {
+    @include aRest;
+    &:focus-visible {
+      outline-color: inherit;
+      outline-width: 0.125rem;
+      outline-style: solid;
+      border-radius: var(--main-border-radius);
+    }
   }
 }

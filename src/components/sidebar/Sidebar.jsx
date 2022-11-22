@@ -9,46 +9,62 @@ import {
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/images/logo.svg";
+import { Link, NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <img src={logo} alt="" className="logo" />
-        <span>Abubakr</span>
+        <Link to="/">
+          <img src={logo} alt="" className="logo" />
+          <span>Abubakr</span>
+        </Link>
       </div>
       <div className="center">
         <ul>
           <li>
-            <FontAwesomeIcon icon={faGauge} />
-            <span>Dashboard</span>
+            <NavLink to="/">
+              <FontAwesomeIcon icon={faGauge} />
+              <span>Dashboard</span>
+            </NavLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faUsers} />
-            <span>Clients</span>
+            <NavLink to="clients">
+              <FontAwesomeIcon icon={faUsers} />
+              <span>Clients</span>
+            </NavLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faEnvelope} />
-            <span>Messages</span>
+            <NavLink to="messages">
+              <FontAwesomeIcon icon={faEnvelope} />
+              <span>Messages</span>
+            </NavLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faFolder} />
-            <span>Projects</span>
+            <NavLink to="projects">
+              <FontAwesomeIcon icon={faFolder} />
+              <span>Projects</span>
+            </NavLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faRss} />
-            <span>Blogs</span>
+            <NavLink to="blogs">
+              <FontAwesomeIcon icon={faRss} />
+              <span>Blogs</span>
+            </NavLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faCircleUser} />
-            <span>Profile</span>
+            <NavLink to="profile">
+              <FontAwesomeIcon icon={faCircleUser} />
+              <span>Profile</span>
+            </NavLink>
           </li>
           <li>
-            <FontAwesomeIcon icon={faGear} />
-            <span>Settings</span>
+            <NavLink to="settings">
+              <FontAwesomeIcon icon={faGear} />
+              <span>Settings</span>
+            </NavLink>
           </li>
         </ul>
       </div>
-      <div className="bottom">options</div>
     </div>
   );
 };

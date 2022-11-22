@@ -4,6 +4,9 @@
   font-size: 0.75em;
   display: flex;
   padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  box-shadow: var(--main-shadow);
   .wrapper {
     @extend %fSpacerC;
     flex: 1;
@@ -12,7 +15,7 @@
       gap: 0.5rem;
       padding: 0.5rem 1rem;
       border: 0.0625rem solid;
-      border-radius: 0.25rem;
+      border-radius: var(--main-border-radius);
       input {
         border: none;
         outline: none;
