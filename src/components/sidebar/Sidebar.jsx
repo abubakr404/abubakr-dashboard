@@ -12,14 +12,14 @@ import logo from "../../assets/images/logo.svg";
 import { Link, NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <div className="top">
+    <>
+      <div className="logo">
         <Link to="/">
-          <img src={logo} alt="" className="logo" />
+          <img src={logo} alt="" className="logo-image" />
           <span>Abubakr</span>
         </Link>
       </div>
-      <div className="center">
+      <nav>
         <ul>
           <li>
             <NavLink to="/">
@@ -64,8 +64,8 @@ const Sidebar = () => {
             </NavLink>
           </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </>
   );
 };
 

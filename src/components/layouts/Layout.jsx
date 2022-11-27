@@ -4,13 +4,15 @@ import { Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
   return (
-    <div className="page">
-      <Sidebar />
-      <section className="page-container">
+    <main className="page">
+      <aside className="sidebar">
+        <Sidebar />
+      </aside>
+      <section className="page-content">
         <Navbar />
         <Outlet />
       </section>
-    </div>
+    </main>
   );
 };
 

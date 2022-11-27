@@ -1,12 +1,16 @@
 import avatar from "../../../assets/images/avatar.webp";
+import { Link } from "react-router-dom";
 
 const New = () => {
   return (
     <section className="new-project">
       <div className="list-container">
-        <h2 className="text-center special-head" title="works">
-          works
-        </h2>
+        <div className="actions">
+          <h2 className="text-center special-head" title="works">
+            works
+          </h2>
+          <Link to="..">back</Link>
+        </div>
         <form className="work-form">
           <input
             className="work-name"

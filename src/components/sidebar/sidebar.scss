@@ -1,25 +1,28 @@
 .sidebar {
   background: var(--primary-gradient);
-  color: var(--text-element-dark);
-  width: var(--sidebar-width);
+  color: var(--light-primary-container);
+  min-width: var(--sidebar-width);
   position: sticky;
   top: 0;
   height: 100vh;
-  .logo {
+  .logo-image {
     max-width: 1.5rem;
   }
   a {
+    @extend %transition;
+    border-radius: var(--main-border-radius);
     &.active,
     &:hover,
-    &:focus {
-      color: var(--light-on-primary);
+    &:focus-visible {
+      background: var(--surface);
+      color: var(--on-primary-container);
     }
   }
-  .top {
+  .logo {
     @extend %fRowCY;
     font-size: 1.125rem;
     height: var(--header-height);
-    border-bottom: 0.0625rem solid;
+    border-bottom: 0.0625rem solid var(--surface);
     padding: 0rem 1rem;
     a {
       @extend %fRowCY;
@@ -27,11 +30,11 @@
       gap: 0.25rem;
     }
   }
-  .center {
+  nav {
     font-size: 0.875rem;
     ul {
       @extend %fCol;
-      gap: 0.25rem;
+      margin-top: 0.5rem;
       a {
         display: block;
         padding: 0.5rem 0.75rem;

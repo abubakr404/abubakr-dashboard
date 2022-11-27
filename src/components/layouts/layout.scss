@@ -1,0 +1,86 @@
+.page {
+  @extend %fRowSY;
+  overflow: auto;
+  .page-content {
+    @extend %fCol;
+    flex: 1;
+    max-height: 100%;
+    overflow: auto;
+  }
+  a {
+    @include aRest;
+    border-radius: var(--main-border-radius);
+    &:focus-visible {
+      outline-color: inherit;
+      outline-width: 0.125rem;
+      outline-style: solid;
+    }
+    &.link {
+      font-size: 0.875rem;
+      padding: 0.3125rem 0.875rem;
+      background-color: var(--text-element);
+      color: var(--text);
+      min-width: max-content;
+    }
+  }
+  .content {
+    @extend %fCol;
+    gap: 1.5rem;
+    margin: 1.5rem;
+    // max-height: calc(100vh - var(--header-height));
+  }
+  .content-container {
+    border-radius: var(--main-border-radius);
+    background: var(--element);
+    box-shadow: var(--main-shadow);
+    max-width: 100%;
+    padding: 1.5rem;
+    overflow: auto;
+    flex: 1;
+  }
+  .content-head {
+    @extend %fSpacerC;
+    margin-bottom: 1.5rem;
+  }
+  .main-title {
+    @extend %fRowCY;
+    margin: 0;
+    font-size: 1.25rem;
+    position: relative;
+    &::before {
+      background-color: var(--inverse-primary);
+      height: 0.1875rem;
+      width: 5rem;
+    }
+    &::after {
+      background-color: var(--on-primary-container);
+      height: 0.35rem;
+      width: 2.5rem;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 10rem;
+      bottom: -0.3125rem;
+      transform: translateY(50%);
+    }
+  }
+  .input {
+    @extend %fCenterS;
+    gap: 0.5rem;
+    padding: 0.5rem 0.625rem;
+    border: 0.0625rem solid;
+    border-radius: var(--main-border-radius);
+    input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: inherit;
+      &::placeholder {
+        font-family: inherit;
+        color: inherit;
+      }
+    }
+  }
+}

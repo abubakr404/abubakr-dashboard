@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Table from "../../../components/table/table";
 
 const List = () => {
@@ -8,7 +9,16 @@ const List = () => {
       email: "a@a.com",
       phone: "0904219999",
       messages: ["message 1", "message 2"],
-      actions: ["edit", "delete"],
+      get actions() {
+        return (
+          <div className="actions">
+            <Link to={`${this.id}`}>
+              <span className="view">view</span>
+            </Link>
+            <span className="delete">delete</span>
+          </div>
+        );
+      },
     },
     {
       id: 2,
@@ -16,7 +26,16 @@ const List = () => {
       email: "a@a.com",
       phone: "0904219999",
       messages: ["message 1", "message 2"],
-      actions: ["edit", "delete"],
+      get actions() {
+        return (
+          <div className="actions">
+            <Link to={`${this.id}`}>
+              <span className="view">view</span>
+            </Link>
+            <span className="delete">delete</span>
+          </div>
+        );
+      },
     },
     {
       id: 3,
@@ -24,23 +43,16 @@ const List = () => {
       email: "a@a.com",
       phone: "0904219999",
       messages: ["message 1", "message 2"],
-      actions: ["edit", "delete"],
-    },
-    {
-      id: 5,
-      name: "ahmed",
-      email: "a@a.com",
-      phone: "0904219999",
-      messages: ["message 1", "message 2"],
-      actions: ["edit", "delete"],
-    },
-    {
-      id: 6,
-      name: "ahmed",
-      email: "a@a.com",
-      phone: "0904219999",
-      messages: ["message 1", "message 2"],
-      actions: ["edit", "delete"],
+      get actions() {
+        return (
+          <div className="actions">
+            <Link to={`${this.id}`}>
+              <span className="view">view</span>
+            </Link>
+            <span className="delete">delete</span>
+          </div>
+        );
+      },
     },
     {
       id: 4,
@@ -48,13 +60,25 @@ const List = () => {
       email: "a@a.com",
       phone: "0904219999",
       messages: ["message 1", "message 2"],
-      actions: ["edit", "delete"],
+      get actions() {
+        return (
+          <div className="actions">
+            <Link to={`${this.id}`}>
+              <span className="view">view</span>
+            </Link>
+            <span className="delete">delete</span>
+          </div>
+        );
+      },
     },
   ];
   return (
     <section className="list">
       <div className="list-container">
-        <h2 className="list-title">Latest Posts</h2>
+        <div className="top">
+          <h2 className="list-title">Latest Posts</h2>
+          <Link to="new-post">New Post</Link>
+        </div>
         <Table tableHeaders={Object.keys(massagesData[0])} tableRows={massagesData} />
       </div>
     </section>

@@ -22,7 +22,8 @@ html {
   --light-on-primary: #ffffff;
   --light-on-primary-container: #0a1a3d;
 
-  --surface-light: linear-gradient(
+  --surface-light: var(--light-primary-container);
+  --alt-surface: linear-gradient(
     135deg,
     #e6e9ff -50%,
     #f5f7ff 25%,
@@ -31,7 +32,7 @@ html {
   );
 
   --background-light: var(--light-primary);
-  --element-light: var(--light-primary-container);
+  --element-light: var(--alt-surface);
   --text-light: var(--light-on-primary);
   --text-element-light: var(--light-on-primary-container);
 
@@ -58,13 +59,13 @@ html {
 
   /* --------------- geanral var set ----------------- */
 
-  --main-transition: #{$mainTransition};
+  --main-transition: 0.3s;
 
   --main-border-color: #{$borderGradient};
 
   --main-border-radius: 0.3125rem;
-  --dark-shadow: 0 0 0.3125rem 0 #272727;
-  --light-shadow: 0 0 0.3125rem 0 #bcbcbc;
+  --dark-shadow: 0 0 0.3125rem 0 #222222bd;
+  --light-shadow: 0 0 0.3125rem 0 #22222222;
 
   --header-height: 3.5rem;
   --sidebar-width: 15rem;
@@ -88,6 +89,7 @@ body {
 
 ul {
   @include ulRest;
+  margin: 0;
 }
 
 .container {
@@ -104,21 +106,43 @@ ul {
 
 @media (prefers-color-scheme: light) {
   .app {
+    --primary: var(--light-primary);
+    --on-primary: var(--light-on-primary);
+    --primary-container: var(--light-primary-container);
+    --on-primary-container: var(--light-on-primary-container);
+
+    --inverse-primary: var(--dark-primary);
+
     --surface: var(--surface-light);
     --background: var(--background-light);
     --background-inverse: var(--background-dark);
+
     --element: var(--element-light);
     --text: var(--text-light);
     --text-element: var(--text-element-light);
+
+    --dark: var(--on-primary-container);
+
     --main-shadow: var(--light-shadow);
     --scheme-color: light;
     &.toggleMode {
+      --primary: var(--dark-primary);
+      --on-primary: var(--dark-on-primary);
+      --primary-container: var(--dark-primary-container);
+      --on-primary-container: var(--dark-on-primary-container);
+
+      --inverse-primary: var(--light-primary);
+
       --surface: var(--surface-dark);
       --background: var(--background-dark);
       --background-inverse: var(--background-light);
+
       --element: var(--element-dark);
       --text: var(--text-dark);
       --text-element: var(--text-element-dark);
+
+      --dark: var(--on-primary);
+
       --main-shadow: var(--dark-shadow);
       --scheme-color: dark;
     }
@@ -127,6 +151,13 @@ ul {
 
 @media (prefers-color-scheme: dark) {
   .app {
+    --primary: var(--dark-primary);
+    --on-primary: var(--dark-on-primary);
+    --primary-container: var(--dark-primary-container);
+    --on-primary-container: var(--dark-on-primary-container);
+
+    --inverse-primary: var(--light-primary);
+
     --surface: var(--surface-dark);
     --background: var(--background-dark);
     --background-inverse: var(--background-light);
@@ -134,9 +165,19 @@ ul {
     --element: var(--element-dark);
     --text: var(--text-dark);
     --text-element: var(--text-element-dark);
+
+    --dark: var(--on-primary);
+
     --main-shadow: var(--dark-shadow);
     --scheme-color: dark;
     &.toggleMode {
+      --primary: var(--light-primary);
+      --on-primary: var(--light-on-primary);
+      --primary-container: var(--light-primary-container);
+      --on-primary-container: var(--light-on-primary-container);
+
+      --inverse-primary: var(--dark-primary);
+
       --surface: var(--surface-light);
       --background: var(--background-light);
       --background-inverse: var(--background-dark);
@@ -144,6 +185,9 @@ ul {
       --element: var(--element-light);
       --text: var(--text-light);
       --text-element: var(--text-element-light);
+
+      --dark: var(--on-primary-container);
+
       --main-shadow: var(--light-shadow);
       --scheme-color: light;
     }
@@ -152,8 +196,9 @@ ul {
 
 .app {
   @extend %fCol;
-  min-height: 100vh;
-  min-width: 100%;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
   color-scheme: var(--scheme-color);
   background: var(--surface);
   color: var(--text-element);
@@ -163,10 +208,11 @@ ul {
 @import "./components/sidebar/sidebar";
 @import "./components/widget/widget";
 @import "./components/table/table";
-@import "./components/layouts/dashboardLayout";
+@import "./components/layouts/layout";
 @import "./pages/login/login";
-@import "./pages/home/home";
+@import "./pages/dashboard/dashboard";
 @import "./pages/clients/list/listClients";
 @import "./pages/clients/single/singleClient";
 @import "./pages/clients/new/newClient";
 @import "./pages/projects/list/listProjects";
+@import "./pages/settings/list/settingsMenu";

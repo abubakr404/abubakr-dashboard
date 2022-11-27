@@ -1,6 +1,8 @@
-import Table from "../../../components/table/table";
+import Widget from "../../components/widget/Widget";
+import Table from "../../components/table/table";
 import { Link } from "react-router-dom";
-const List = () => {
+
+const Home = () => {
   const massagesData = [
     {
       id: 1,
@@ -11,7 +13,7 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
+            <Link to={`messages/${this.id}`}>
               <span className="view">view</span>
             </Link>
             <span className="delete">delete</span>
@@ -28,7 +30,7 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
+            <Link to={`messages/${this.id}`}>
               <span className="view">view</span>
             </Link>
             <span className="delete">delete</span>
@@ -45,7 +47,7 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
+            <Link to={`messages/${this.id}`}>
               <span className="view">view</span>
             </Link>
             <span className="delete">delete</span>
@@ -62,41 +64,7 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
-            </Link>
-            <span className="delete">delete</span>
-          </div>
-        );
-      },
-    },
-    {
-      id: 5,
-      name: "ahmed",
-      email: "a@a.com",
-      phone: "0904219999",
-      messages: ["message 1", "message 2"],
-      get actions() {
-        return (
-          <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
-            </Link>
-            <span className="delete">delete</span>
-          </div>
-        );
-      },
-    },
-    {
-      id: 6,
-      name: "ahmed",
-      email: "a@a.com",
-      phone: "0904219999",
-      messages: ["message 1", "message 2"],
-      get actions() {
-        return (
-          <div className="actions">
-            <Link to={`${this.id}`}>
+            <Link to={`messages/${this.id}`}>
               <span className="view">view</span>
             </Link>
             <span className="delete">delete</span>
@@ -105,14 +73,25 @@ const List = () => {
       },
     },
   ];
+
   return (
-    <section className="list">
-      <div className="list-container">
-        <h2 className="list-title">Latest Messages</h2>
+    <section className="content dashboard">
+      <div className="widgets">
+        <Widget />
+        <Widget />
+        <Widget />
+      </div>
+      <div className="content-container">
+        <div className="content-head">
+          <h2 className="main-title">Latest Messages</h2>
+          <Link to="messages" className="link">
+            See All
+          </Link>
+        </div>
         <Table tableHeaders={Object.keys(massagesData[0])} tableRows={massagesData} />
       </div>
     </section>
   );
 };
 
-export default List;
+export default Home;

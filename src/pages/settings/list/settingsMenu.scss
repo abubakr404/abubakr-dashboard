@@ -1,0 +1,35 @@
+.setting-container {
+  display: flex;
+  background: var(--primary);
+  color: var(--on-primary);
+  margin: 1.5rem;
+  flex: 1;
+  border-radius: var(--main-border-radius);
+}
+.setting-menu {
+  border-radius: var(--main-border-radius);
+  width: 15rem;
+  padding: 1rem;
+  font-size: 0.875rem;
+  li {
+    padding: 0.125rem 0rem;
+  }
+  a {
+    @extend %transition;
+    display: flex;
+    padding: 0.65rem 1.5rem;
+    border-radius: var(--main-border-radius);
+    &.active,
+    &:hover,
+    :focus-visible {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+    }
+  }
+}
+.setup-side {
+  flex: 1;
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  padding: 1.5rem;
+}

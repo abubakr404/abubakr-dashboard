@@ -1,9 +1,11 @@
 import avatar from "../../../assets/images/avatar.webp";
+import { Link } from "react-router-dom";
 
 const Single = () => {
   return (
     <section className="single">
       <div className="list-container">
+        <Link to="..">back</Link>
         <div className="customer">
           <img src={avatar} alt="" className="avatar" />
           <div className="info">

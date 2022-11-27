@@ -1,32 +1,16 @@
 .navbar {
   background: var(--element);
-  height: var(--header-height);
+  min-height: var(--header-height);
   font-size: 0.75em;
   display: flex;
   padding: 0 1.5rem;
   position: sticky;
   top: 0;
+  z-index: 10000000;
   box-shadow: var(--main-shadow);
   .wrapper {
     @extend %fSpacerC;
     flex: 1;
-    .search {
-      @extend %fCenter;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      border: 0.0625rem solid;
-      border-radius: var(--main-border-radius);
-      input {
-        border: none;
-        outline: none;
-        background-color: transparent;
-        color: inherit;
-        &::placeholder {
-          font-family: inherit;
-          color: inherit;
-        }
-      }
-    }
     .items {
       display: flex;
     }

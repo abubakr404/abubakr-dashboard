@@ -4,49 +4,75 @@
   }
 }
 .clients-container {
-  @include responGridCol(13rem);
+  @include responGridCol(16rem);
 }
 .client-card {
   @extend %fCol;
-  padding: 1rem;
-  background: var(--surface);
-  border-radius: var(--main-border-radius);
+  background: var(--surface-light);
   box-shadow: var(--main-shadow);
+  color: var(--dark);
+  border-radius: calc(0.0625rem + var(--main-border-radius));
+  .avatar-container {
+    background: var(--dark);
+    min-height: 6.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
+  }
   img {
-    width: 5rem;
-    height: 5rem;
+    background: var(--dark);
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
-    border: 0.0625rem solid;
+    border: 0.3125rem solid var(--dark);
     object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 25%);
   }
   .info {
     @extend %fColC;
     .name {
-      margin: 0.625rem 0 0.125rem;
-      font-size: 1.125rem;
+      font-size: 1.25rem;
+      font-weight: bold;
     }
   }
   .contact {
-    @extend %fColC;
-    gap: 0.25rem;
+    @extend %fRowC;
+    border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+    gap: 0.5rem;
+    padding: 0.875rem;
     font-size: 0.75rem;
+    a.social-link {
+      @extend %fCenter;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--dark);
+      color: var(--surface-light);
+      &:hover {
+        color: var(--light-on-primary);
+      }
+    }
   }
   .actions {
     @extend %fSpacer;
     margin-top: 0.5rem;
-    padding: 0.25rem;
+    padding: 0 1.5rem 1.5rem;
+    gap: 1rem;
     a {
       display: flex;
     }
     span {
       padding: 0.25rem 1rem;
       border-radius: 0.3125rem;
-      width: 5rem;
+      min-width: max-content;
       cursor: pointer;
       text-align: center;
       color: var(--light-on-primary);
       &.view {
-        background-color: var(--success);
+        background-color: var(--dark);
       }
       &.delete {
         background-color: var(--danger);
