@@ -143,10 +143,10 @@ const List = () => {
                 ))}
               </ul>
               <div className="actions">
-                <Link to={`${client.id}`}>
-                  <span className="view">See More</span>
+                <Link to={`${client.id}`} className="link inverse">
+                  See More
                 </Link>
-                <span className="delete">Delete</span>
+                <button className="button danger">Delete</button>
               </div>
             </div>
           ))}

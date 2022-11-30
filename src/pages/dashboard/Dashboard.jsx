@@ -13,10 +13,10 @@ const Home = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`messages/${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -30,10 +30,10 @@ const Home = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`messages/${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -47,10 +47,10 @@ const Home = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`messages/${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -64,10 +64,10 @@ const Home = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`messages/${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },

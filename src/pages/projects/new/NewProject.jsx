@@ -1,110 +1,167 @@
 import avatar from "../../../assets/images/avatar.webp";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBriefcase,
+  faPalette,
+  faLink,
+  faEye,
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faCss3Alt,
+  faGithub,
+  faGulp,
+  faHtml5,
+  faJsSquare,
+  faSass,
+  faVuejs,
+} from "@fortawesome/free-brands-svg-icons";
 
 const New = () => {
   return (
-    <section className="new-project">
-      <div className="list-container">
-        <div className="actions">
-          <h2 className="text-center special-head" title="works">
-            works
-          </h2>
-          <Link to="..">back</Link>
+    <section className="content new-project">
+      <div className="content-container">
+        <div className="content-head">
+          <Link to=".." className="link">
+            back
+          </Link>
         </div>
-        <form className="work-form">
-          <input
-            className="work-name"
-            type="text"
-            name="work-name"
-            placeholder="Work name"
-          />
-          <input
-            className="work-desinger"
-            type="text"
-            name="work-desinger"
-            placeholder="work desinger"
-          />
-          <input
-            className="work-desinger-link"
-            type="text"
-            name="work-desinger-link"
-            placeholder="work desinger link"
-          />
-          <input
-            className="work-code-link"
-            type="text"
-            name="work-code-link"
-            placeholder="work code link"
-          />
-          <input
-            className="work-live-link"
-            type="text"
-            name="work-live-link"
-            placeholder="work live link"
-          />
-          <div className="technologies">
-            <input
-              className="technology"
-              type="checkbox"
-              id="html5"
-              value="fab fa-html5"
-            />
-            <label htmlFor="html5">
-              <i className="fab fa-html5"></i>
-              <span>html5</span>
+        <form className="project-form">
+          <fieldset className="basic">
+            <legend>Basic Information</legend>
+            <div className="form-group">
+              <label>Project Name</label>
+              <div className="input">
+                <FontAwesomeIcon icon={faBriefcase} />
+                <input type="text" name="projectName" placeholder="Project Name" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label>Project Desinger</label>
+              <div className="input">
+                <FontAwesomeIcon icon={faPalette} />
+                <input
+                  type="text"
+                  name="projectDesinger"
+                  placeholder="Project Desinger"
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <label>Desinger Link</label>
+              <div className="input">
+                <FontAwesomeIcon icon={faLink} />
+                <input type="text" name="desingerLink" placeholder="Desinger Link" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label>Project Repository</label>
+              <div className="input">
+                <FontAwesomeIcon icon={faGithub} />
+                <input type="text" name="ProjectRepo" placeholder="Code Link" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label>Live Link</label>
+              <div className="input">
+                <FontAwesomeIcon icon={faEye} />
+                <input type="text" name="liveLink" placeholder="Project Live Link" />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset className="technologies">
+            <legend>Project Technologies</legend>
+            <ul>
+              <li className="form-group">
+                <label htmlFor="html5">
+                  <div className="box">
+                    <input type="checkbox" id="html5" value="fab fa-html5" />
+                  </div>
+                  <div className="lable">
+                    <FontAwesomeIcon icon={faHtml5} />
+                    <span className="title">html5</span>
+                  </div>
+                </label>
+              </li>
+              <li className="form-group">
+                <label htmlFor="css3">
+                  <div className="box">
+                    <input type="checkbox" id="css3" value="fab fa-css3-alt" />
+                  </div>
+                  <div className="lable">
+                    <FontAwesomeIcon icon={faCss3Alt} />
+                    <span className="title">css3</span>
+                  </div>
+                </label>
+              </li>
+              <li className="form-group">
+                <label htmlFor="javascript">
+                  <div className="box">
+                    <input type="checkbox" id="javascript" value="fab fa-js-square" />
+                  </div>
+                  <div className="lable">
+                    <FontAwesomeIcon icon={faJsSquare} />
+                    <span className="title">javascript</span>
+                  </div>
+                </label>
+              </li>
+              <li className="form-group">
+                <label htmlFor="sass">
+                  <div className="box">
+                    <input type="checkbox" id="sass" value="fab fa-sass" />
+                  </div>
+                  <div className="lable">
+                    <FontAwesomeIcon icon={faSass} />
+                    <span className="title">sass</span>
+                  </div>
+                </label>
+              </li>
+              <li className="form-group">
+                <label htmlFor="gulp">
+                  <div className="box">
+                    <input type="checkbox" id="gulp" value="fab fa-gulp" />
+                  </div>
+                  <div className="lable">
+                    <FontAwesomeIcon icon={faGulp} />
+                    <span className="title">gulp</span>
+                  </div>
+                </label>
+              </li>
+              <li className="form-group">
+                <label htmlFor="vuejs">
+                  <div className="box">
+                    <input type="checkbox" id="vuejs" value="fab fa-vuejs" />
+                  </div>
+                  <div className="lable">
+                    <FontAwesomeIcon icon={faVuejs} />
+                    <span className="title">vuejs</span>
+                  </div>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset className="images">
+            <legend>Project Images</legend>
+            <label htmlFor="desktopImg" className="form-group">
+              <input type="file" name="desktopImg" id="desktopImg" />
+              <img src={avatar} name="desktopImage" />
             </label>
-            <input
-              className="technology"
-              type="checkbox"
-              id="css3"
-              value="fab fa-css3-alt"
-            />
-            <label htmlFor="css3">
-              <i className="fab fa-css3-alt"></i>
-              <span>css3</span>
+            <label htmlFor="tabletImg" className="form-group">
+              <input type="file" name="tabletImg" id="tabletImg" />
+              <img src={avatar} name="tabletImage" />
             </label>
-            <input
-              className="technology"
-              type="checkbox"
-              id="javascript"
-              value="fab fa-js-square"
-            />
-            <label htmlFor="javascript">
-              <i className="fab fa-js-square"></i>
-              <span>javascript</span>
+            <label htmlFor="mobileImg" className="form-group">
+              <input type="file" name="mobileImg" id="mobileImg" />
+              <img src={avatar} name="mobileImage" />
             </label>
-            <input className="technology" type="checkbox" id="sass" value="fab fa-sass" />
-            <label htmlFor="sass">
-              <i className="fab fa-sass"></i>
-              <span>sass</span>
-            </label>
-            <input className="technology" type="checkbox" id="gulp" value="fab fa-gulp" />
-            <label htmlFor="gulp">
-              <i className="fab fa-gulp"></i>
-              <span>gulp</span>
-            </label>
-            <input
-              className="technology"
-              type="checkbox"
-              id="vuejs"
-              value="fab fa-vuejs"
-            />
-            <label htmlFor="vuejs">
-              <i className="fab fa-vuejs"></i>
-              <span>vuejs</span>
-            </label>
+          </fieldset>
+          <div className="actions">
+            <button className="submit">
+              <FontAwesomeIcon icon={faPlus} />
+              <span className="title">Add Project</span>
+            </button>
           </div>
-          <div className="project-images fRowC">
-            <input className="workImgRender" type="file" data-device="desktop" />
-            <img className="workImgViewer" />
-            <input className="workImgRender" type="file" data-device="tablet" />
-            <img className="workImgViewer" />
-            <input className="workImgRender" type="file" data-device="mobile" />
-            <img className="workImgViewer" />
-          </div>
-          <button className="submit btn btn-primary" type="submit">
-            <i className="fa fa-plus" aria-hidden="true"></i>Add Work
-          </button>
         </form>
       </div>
     </section>

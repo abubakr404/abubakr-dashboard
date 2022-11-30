@@ -11,10 +11,10 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -28,10 +28,10 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -45,10 +45,10 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -62,10 +62,10 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -79,10 +79,10 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -96,19 +96,21 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
     },
   ];
   return (
-    <section className="list">
-      <div className="list-container">
-        <h2 className="list-title">Latest Messages</h2>
+    <section className="content messages">
+      <div className="content-container">
+        <div className="content-head">
+          <h2 className="main-title">Latest Messages</h2>
+        </div>
         <Table tableHeaders={Object.keys(massagesData[0])} tableRows={massagesData} />
       </div>
     </section>

@@ -57,26 +57,9 @@
     }
   }
   .actions {
-    @extend %fSpacer;
     margin-top: 0.5rem;
     padding: 0 1.5rem 1.5rem;
+    justify-content: space-between;
     gap: 1rem;
-    a {
-      display: flex;
-    }
-    span {
-      padding: 0.25rem 1rem;
-      border-radius: 0.3125rem;
-      min-width: max-content;
-      cursor: pointer;
-      text-align: center;
-      color: var(--light-on-primary);
-      &.view {
-        background-color: var(--dark);
-      }
-      &.delete {
-        background-color: var(--danger);
-      }
-    }
   }
 }

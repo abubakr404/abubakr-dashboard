@@ -12,10 +12,10 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -29,10 +29,10 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -46,10 +46,10 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
@@ -63,21 +63,23 @@ const List = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`}>
-              <span className="view">view</span>
+            <Link to={`${this.id}`} className="link inverse">
+              view
             </Link>
-            <span className="delete">delete</span>
+            <button className="button danger">delete</button>
           </div>
         );
       },
     },
   ];
   return (
-    <section className="list">
-      <div className="list-container">
-        <div className="top">
-          <h2 className="list-title">Latest Posts</h2>
-          <Link to="new-post">New Post</Link>
+    <section className="content single-message">
+      <div className="content-container">
+        <div className="content-head">
+          <h2 className="main-title">Latest Posts</h2>
+          <Link to="new-post" className="link">
+            New Post
+          </Link>
         </div>
         <Table tableHeaders={Object.keys(massagesData[0])} tableRows={massagesData} />
       </div>

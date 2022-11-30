@@ -1,0 +1,61 @@
+.project-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.875rem;
+  fieldset {
+    &.technologies {
+      min-width: 15rem;
+    }
+    &.images {
+      display: flex;
+      flex-wrap: wrap;
+      .form-group {
+        flex: 1;
+        width: 5rem;
+        padding: 1rem;
+        gap: 1rem;
+      }
+      img {
+        max-width: 100%;
+        border: 0.0625rem solid;
+        border-radius: var(--main-border-radius);
+        background: var(--inverse-primary);
+      }
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    li {
+      flex-basis: 30%;
+    }
+    .form-group label {
+      @extend %fCenter;
+      flex-direction: column;
+      border-radius: var(--main-border-radius);
+      height: 5rem;
+      border: 0.0625rem solid;
+      &.checked {
+        background: var(--surface);
+      }
+      .box {
+        display: none;
+      }
+      .lable {
+        @extend %fCol;
+        font-size: 1.5rem;
+        gap: 0.25rem;
+        .title {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+  .actions {
+    min-width: 100%;
+    padding: 0.5rem 0;
+  }
+}

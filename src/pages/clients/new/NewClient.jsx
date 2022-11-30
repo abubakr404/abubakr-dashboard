@@ -1,7 +1,13 @@
 import avatar from "../../../assets/images/avatar.webp";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faPhone, faFolder, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faPhone,
+  faFolder,
+  faEnvelope,
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const New = () => {
@@ -72,7 +78,10 @@ const New = () => {
           </form>
         </div>
         <div className="actions">
-          <span className="link">Add Client</span>
+          <button className="submit">
+            <FontAwesomeIcon icon={faPlus} />
+            <span className="title">Add Client</span>
+          </button>
         </div>
       </div>
     </section>
