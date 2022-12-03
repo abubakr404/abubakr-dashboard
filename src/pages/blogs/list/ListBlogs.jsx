@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import Table from "../../../components/table/table";
 
 const List = () => {
-  const massagesData = [
+  const blogsData = [
     {
       id: 1,
-      name: "ahmed",
-      email: "a@a.com",
-      phone: "0904219999",
-      messages: ["message 1", "message 2"],
+      title: "blogs test",
+      details: <p className="post">this is test post</p>,
+      date: "12/1/2022",
       get actions() {
         return (
           <div className="actions">
@@ -22,10 +21,9 @@ const List = () => {
     },
     {
       id: 2,
-      name: "ahmed",
-      email: "a@a.com",
-      phone: "0904219999",
-      messages: ["message 1", "message 2"],
+      title: "blogs test",
+      details: <p className="post">this is test post</p>,
+      date: "12/1/2022",
       get actions() {
         return (
           <div className="actions">
@@ -39,10 +37,9 @@ const List = () => {
     },
     {
       id: 3,
-      name: "ahmed",
-      email: "a@a.com",
-      phone: "0904219999",
-      messages: ["message 1", "message 2"],
+      title: "blogs test",
+      details: <p className="post">this is test post</p>,
+      date: "12/1/2022",
       get actions() {
         return (
           <div className="actions">
@@ -56,10 +53,9 @@ const List = () => {
     },
     {
       id: 4,
-      name: "ahmed",
-      email: "a@a.com",
-      phone: "0904219999",
-      messages: ["message 1", "message 2"],
+      title: "blogs test",
+      details: <p className="post">this is test post</p>,
+      date: "12/1/2022",
       get actions() {
         return (
           <div className="actions">
@@ -76,12 +72,12 @@ const List = () => {
     <section className="content single-message">
       <div className="content-container">
         <div className="content-head">
-          <h2 className="main-title">Latest Posts</h2>
+          <h2 className="main-title">Posts List</h2>
           <Link to="new-post" className="link">
             New Post
           </Link>
         </div>
-        <Table tableHeaders={Object.keys(massagesData[0])} tableRows={massagesData} />
+        <Table tableHeaders={Object.keys(blogsData[0])} tableRows={blogsData} />
       </div>
     </section>
   );

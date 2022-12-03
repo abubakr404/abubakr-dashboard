@@ -233,7 +233,7 @@ const List = () => {
     <section className="content projects">
       <div className="content-container">
         <div className="content-head">
-          <h2 className="main-title">Latest Projects</h2>
+          <h2 className="main-title">Projects List</h2>
           <Link to="new-project" className="link">
             New Project
           </Link>

@@ -109,7 +109,7 @@ const List = () => {
     <section className="content messages">
       <div className="content-container">
         <div className="content-head">
-          <h2 className="main-title">Latest Messages</h2>
+          <h2 className="main-title">Messages List</h2>
         </div>
         <Table tableHeaders={Object.keys(massagesData[0])} tableRows={massagesData} />
       </div>

@@ -115,7 +115,7 @@ ul {
 
     --surface: var(--surface-light);
     --background: var(--background-light);
-    --background-inverse: var(--background-dark);
+    --background-inverse: var(--dark-on-primary-container);
 
     --element: var(--element-light);
     --text: var(--text-light);
@@ -180,7 +180,7 @@ ul {
 
       --surface: var(--surface-light);
       --background: var(--background-light);
-      --background-inverse: var(--background-dark);
+      --background-inverse: var(--dark-on-primary-container);
 
       --element: var(--element-light);
       --text: var(--text-light);
@@ -218,4 +218,10 @@ ul {
 @import "./pages/projects/list/listProjects";
 @import "./pages/projects/new/newProject";
 @import "./pages/projects/single/singleProject";
+@import "./pages/blogs/list/listBlogs";
+@import "./pages/blogs/new/newPost";
+@import "./pages/blogs/single/singlePost";
 @import "./pages/settings/list/settingsMenu";
+@import "./pages/settings/single/general/generalSetup";
+@import "./pages/settings/single/hero/setupHero";
+@import "./pages/settings/single/about/setupAbout";

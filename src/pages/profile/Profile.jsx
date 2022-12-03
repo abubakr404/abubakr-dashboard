@@ -1,10 +1,16 @@
+import { Link } from "react-router-dom";
 import avatar from "../../assets/images/avatar.webp";
 
 const Single = () => {
   return (
-    <section className="single">
-      <div className="list-container">
-        <div className="customer">
+    <section className="content profile">
+      <div className="content-container">
+        <div className="content-head">
+          <Link to=".." className="link">
+            back
+          </Link>
+        </div>
+        <div className="project">
           <img src={avatar} alt="" className="avatar" />
           <div className="info">
             <div className="name">ahmed ali</div>

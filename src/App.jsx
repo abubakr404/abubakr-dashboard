@@ -3,7 +3,7 @@ import Login from "./pages/login/Login";
 import ListClients from "./pages/clients/list/ListClients";
 import ListMessages from "./pages/messages/list/ListMessages";
 import ListProjects from "./pages/projects/list/ListProjects";
-import ListBolgs from "./pages/blogs/list/ListBolgs";
+import ListBlogs from "./pages/blogs/list/ListBlogs";
 import SettingsMenu from "./pages/settings/list/SettingsMenu";
 import SingleClient from "./pages/clients/single/SingleClient";
 import SingleMessage from "./pages/messages/single/SingleMessage";
@@ -19,9 +19,13 @@ import SetupContact from "./pages/settings/single/contact/SetupContact";
 import GeneralSetup from "./pages/settings/single/general/GeneralSetup";
 import Layout from "./components/layouts/Layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 const App = () => {
+  const { currentMode } = useContext(ThemeContext);
+
   return (
-    <div className="app">
+    <div className={currentMode ? "app toggleMode" : "app"}>
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<Login />} />
@@ -42,7 +46,7 @@ const App = () => {
               <Route path="new-project" element={<NewProject />} />
             </Route>
             <Route path="blogs">
-              <Route index element={<ListBolgs />} />
+              <Route index element={<ListBlogs />} />
               <Route path=":postId" element={<SinglePost />} />
               <Route path="new-post" element={<NewPost />} />
             </Route>

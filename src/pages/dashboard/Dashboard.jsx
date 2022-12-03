@@ -13,7 +13,7 @@ const Home = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`} className="link inverse">
+            <Link to={`messages/${this.id}`} className="link inverse">
               view
             </Link>
             <button className="button danger">delete</button>
@@ -30,7 +30,7 @@ const Home = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`} className="link inverse">
+            <Link to={`messages/${this.id}`} className="link inverse">
               view
             </Link>
             <button className="button danger">delete</button>
@@ -47,7 +47,7 @@ const Home = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`} className="link inverse">
+            <Link to={`messages/${this.id}`} className="link inverse">
               view
             </Link>
             <button className="button danger">delete</button>
@@ -64,7 +64,7 @@ const Home = () => {
       get actions() {
         return (
           <div className="actions">
-            <Link to={`${this.id}`} className="link inverse">
+            <Link to={`messages/${this.id}`} className="link inverse">
               view
             </Link>
             <button className="button danger">delete</button>

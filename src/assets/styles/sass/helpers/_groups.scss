@@ -17,15 +17,6 @@
   z-index: 1;
 }
 
-// %sectionBackground {
-//   background-color: var(--section-background);
-// }
-
-%inversButton {
-  background-color: var(--main-color);
-  color: var(--background-color);
-}
-
 %sectionPadding {
   padding: {
     top: var(--main-padding-top);
@@ -47,24 +38,16 @@
   @include twoColG;
 }
 
-%fCol {
-  @include fCol;
+%f {
+  @include f;
 }
 
-%fColS {
-  @include fCol(start);
-}
-
-%fColC {
-  @include fCol(center);
-}
-
-%fRowY {
-  @include fRowY;
+%fRow {
+  @include fRow;
 }
 
 %fRowSY {
-  @include fRowY(start);
+  @include fRowY(flex-start);
 }
 
 %fRowCY {
@@ -72,27 +55,71 @@
 }
 
 %fRowEY {
-  @include fRowY(end);
+  @include fRowY(flex-end);
 }
 
-%fColC {
-  @include fCol(center);
+%fRowSX {
+  @include fRowX(flex-start);
 }
 
-%fRow {
-  @include fRow;
+%fRowCX {
+  @include fRowX(center);
+}
+
+%fRowEX {
+  @include fRowX(flex-end);
 }
 
 %fRowS {
-  @include fRow(start);
+  @extend %fRowSY;
 }
 
 %fRowC {
-  @include fRow(center);
+  @extend %fRowCY;
 }
 
 %fRowE {
-  @include fRow(end);
+  @extend %fRowEY;
+}
+
+%fCol {
+  @include fCol;
+}
+
+%fColSX {
+  @include fColX(flex-start);
+}
+
+%fColCX {
+  @include fColX(center);
+}
+
+%fColEX {
+  @include fColX(flex-end);
+}
+
+%fColSY {
+  @include fColY(flex-start);
+}
+
+%fColCY {
+  @include fColY(center);
+}
+
+%fColEY {
+  @include fColY(flex-end);
+}
+
+%fColS {
+  @extend %fColSX;
+}
+
+%fColC {
+  @extend %fColCX;
+}
+
+%fColE {
+  @extend %fColEX;
 }
 
 %hPCenter {
@@ -103,12 +130,20 @@
   @include vPCenter;
 }
 
-%fCenterS {
-  @include fCenter(center, flex-start);
-}
-
 %fCenter {
   @include fCenter;
+}
+
+%fCenterV {
+  @include fCenter(center, center, column);
+}
+
+%fCenterH {
+  @include fCenter(center, center, row);
+}
+
+%fCenterS {
+  @include fCenter(center, flex-start);
 }
 
 %fCenterE {
@@ -133,6 +168,18 @@
 }
 %fSpacerY {
   @include fSpacer(column, false);
+}
+
+%fWraper {
+  @include fWraper;
+}
+
+%fWraperH {
+  @include fWraper(row);
+}
+
+%fWraperV {
+  @include fWraper(column);
 }
 
 %aRest {

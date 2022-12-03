@@ -1,0 +1,29 @@
+.single-post {
+  article.post {
+    @extend %fCol;
+    gap: 1rem;
+  }
+  .article-title {
+    @extend %fSpacerC;
+    .title {
+      margin: 0;
+    }
+    .date {
+      font-size: 0.75rem;
+    }
+  }
+  .article-details {
+    .post-image {
+      max-width: 100%;
+      img {
+        object-fit: cover;
+      }
+    }
+    p {
+      padding: 1rem 1.5rem;
+      border-radius: var(--main-border-radius);
+      background-color: var(--background-inverse);
+      font-size: 0.875rem;
+    }
+  }
+}

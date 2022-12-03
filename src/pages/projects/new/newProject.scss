@@ -1,16 +1,12 @@
-.project-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 1rem;
+.new-project {
   font-size: 0.875rem;
   fieldset {
     &.technologies {
       min-width: 15rem;
     }
     &.images {
-      display: flex;
-      flex-wrap: wrap;
+      @extend %fWraper;
+      min-width: 13rem;
       .form-group {
         flex: 1;
         width: 5rem;
@@ -26,17 +22,16 @@
     }
   }
   ul {
-    display: flex;
-    flex-wrap: wrap;
+    @extend %fWraper;
     gap: 0.75rem;
     li {
       flex-basis: 30%;
     }
     .form-group label {
-      @extend %fCenter;
-      flex-direction: column;
+      @extend %fCenterV;
       border-radius: var(--main-border-radius);
       height: 5rem;
+      min-width: 5rem;
       border: 0.0625rem solid;
       &.checked {
         background: var(--surface);
@@ -53,9 +48,5 @@
         }
       }
     }
-  }
-  .actions {
-    min-width: 100%;
-    padding: 0.5rem 0;
   }
 }

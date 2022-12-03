@@ -39,7 +39,7 @@
     }
   }
   .contact {
-    @extend %fRowC;
+    @extend %fRowCX;
     border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
     gap: 0.5rem;
     padding: 0.875rem;

@@ -1,0 +1,17 @@
+.new-project {
+  fieldset {
+    &.basic {
+      flex: 3;
+    }
+    &.images {
+      min-width: 13rem;
+      img {
+        margin-top: 0.5rem;
+        max-width: 100%;
+        border: 0.0625rem solid;
+        border-radius: var(--main-border-radius);
+        background: var(--inverse-primary);
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .new-client {
   .client-container {
-    @extend %fRowSY;
+    @extend %fRowS;
   }
   .avatar-container {
     width: 12rem;
@@ -10,15 +10,10 @@
     border: none;
   }
   .base {
-    display: flex;
+    @extend %fWraper;
     gap: 1.5rem;
-    flex-wrap: wrap;
     .left {
       max-width: 10rem;
     }
-  }
-  .client-form {
-    display: flex;
-    flex-wrap: wrap;
   }
 }

@@ -1,7 +1,7 @@
 .setting-container {
-  display: flex;
-  background: var(--primary);
-  color: var(--on-primary);
+  @extend %f;
+  background: var(--primary-gradient);
+  color: var(--light-primary-container);
   margin: 1.5rem;
   flex: 1;
   border-radius: var(--main-border-radius);
@@ -16,20 +16,22 @@
   }
   a {
     @extend %transition;
-    display: flex;
-    padding: 0.65rem 1.5rem;
+    @extend %fRowC;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
     border-radius: var(--main-border-radius);
     &.active,
     &:hover,
     :focus-visible {
-      background: var(--primary-container);
+      background: var(--surface);
       color: var(--on-primary-container);
     }
   }
 }
 .setup-side {
   flex: 1;
-  background: var(--primary-container);
+  background: var(--element);
   color: var(--on-primary-container);
   padding: 1.5rem;
+  border-radius: 0 var(--main-border-radius) var(--main-border-radius) 0;
 }
