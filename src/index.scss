@@ -34,7 +34,7 @@ html {
   --background-light: var(--light-primary);
   --element-light: var(--alt-surface);
   --text-light: var(--light-on-primary);
-  --text-element-light: var(--light-on-primary-container);
+  --text-element-light: var(--dark-on-primary);
 
   /* --------------- dark colors set ----------------- */
 
@@ -109,7 +109,7 @@ ul {
     --primary: var(--light-primary);
     --on-primary: var(--light-on-primary);
     --primary-container: var(--light-primary-container);
-    --on-primary-container: var(--light-on-primary-container);
+    --on-primary-container: var(--dark-on-primary);
 
     --inverse-primary: var(--dark-primary);
 
@@ -174,7 +174,7 @@ ul {
       --primary: var(--light-primary);
       --on-primary: var(--light-on-primary);
       --primary-container: var(--light-primary-container);
-      --on-primary-container: var(--light-on-primary-container);
+      --on-primary-container: var(--dark-on-primary);
 
       --inverse-primary: var(--dark-primary);
 
@@ -225,3 +225,4 @@ ul {
 @import "./pages/settings/single/general/generalSetup";
 @import "./pages/settings/single/hero/setupHero";
 @import "./pages/settings/single/about/setupAbout";
+@import "./pages/login/login";
